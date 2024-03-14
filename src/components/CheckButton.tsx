@@ -4,12 +4,8 @@ interface ICheckButtonProps {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export default function CheckButton({
-  label,
-  isChecked,
-  onClick,
-}: ICheckButtonProps) {
-  const isCheckedStyle = isChecked ? "bg-primary" : "bg-transparent";
+export default function CheckButton({ label, isChecked, onClick }: ICheckButtonProps) {
+  const isCheckedStyle = isChecked ? 'bg-primary' : 'bg-transparent';
 
   return (
     <div className="flex flex-col items-center gap-1">

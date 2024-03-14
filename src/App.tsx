@@ -1,9 +1,13 @@
-import CheckButtonList from "./components/CheckButtonList";
+import WideCheckButtonList from "./components/WideCheckButtonList";
 
 function App() {
   return (
-    <CheckButtonList
-      checkedList={["30대", "40대", "50대", "60대", "70대", "상관없음"]}
+    <WideCheckButtonList
+      checkedList={[
+        "기본 설정(앱 설치, 환경설정 등)",
+        "기본 활용(카메라, 갤러리 등)",
+        "실생활 활용(카카오톡, 모바일 주문, 배달 앱 등)",
+      ]}
       onCheckedClick={console.log}
     />
   );

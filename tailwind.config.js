@@ -7,6 +7,7 @@ export default {
       card: "22.6px",
       "primary-button": "50px",
       "check-button": "8px",
+      "wide-check-button": "16px",
     },
     fontWeight: {
       regular: "400",
