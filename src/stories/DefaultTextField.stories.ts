@@ -11,16 +11,6 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    iconAlt: {
-      control: "text",
-      description: "아이콘 이미지의 alt 속성",
-      defaultValue: "icon",
-    },
-    iconPath: {
-      control: "text",
-      description: "아이콘 이미지의 경로",
-      defaultValue: "",
-    },
     placeholder: {
       control: "text",
       description: "텍스트 필드의 Placeholder",
@@ -47,7 +37,6 @@ const meta = {
       defaultValue: "",
     },
     onChange: { action: "changed", description: "텍스트 필드 값 변경 이벤트" },
-    onIconClick: { action: "clicked", description: "버튼 클릭 이벤트" },
   },
 } satisfies Meta<typeof DefaultTextField>;
 
@@ -56,13 +45,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    iconAlt: "icon",
-    iconPath:
-      "https://res.cloudinary.com/dl31hx4rn/image/upload/v1710373324/abqz2pnd5yqlfjbyzxoh.svg",
     placeholder: "텍스트를 입력해주세요",
     value: "",
     errorMessage: "텍스트를 확인해주세요",
     isError: false,
     id: "email",
+    onChange: () => {},
   },
 };

@@ -8,7 +8,7 @@ interface ICheckButtonListProps<T extends string> {
 
 export default function CheckButtonList<T extends string>({
   checkedList,
-  onCheckedClick,
+  // onCheckedClick,
 }: ICheckButtonListProps<T>) {
   const [selectedChecked, setSelectedChecked] = useState(checkedList[0]);
   return (
