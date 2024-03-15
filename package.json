@@ -2,7 +2,7 @@
   "name": "olleh-front-v2",
   "description": "Component course practice using storybook",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "src/components",
