@@ -24,6 +24,11 @@ const meta = {
       description: "버튼 테마",
       defaultValue: "dark",
     },
+    disabled: {
+      type: "boolean",
+      description: "버튼 비활성화 여부",
+      defaultValue: false,
+    },
     children: {
       control: "text",
       description: "버튼 text",
@@ -39,6 +44,7 @@ type Story = StoryObj<typeof meta>;
 export const Light: Story = {
   args: {
     children: "Button",
+    disabled: false,
     theme: "light",
     onClick: () => {},
   },
@@ -47,6 +53,7 @@ export const Light: Story = {
 export const Dark: Story = {
   args: {
     children: "Button",
+    disabled: false,
     theme: "dark",
     onClick: () => {},
   },
@@ -55,6 +62,7 @@ export const Dark: Story = {
 export const Social: Story = {
   args: {
     children: "Button",
+    disabled: false,
     theme: "social",
     onClick: () => {},
   },
@@ -63,6 +71,7 @@ export const Social: Story = {
 export const Text: Story = {
   args: {
     children: "Button",
+    disabled: false,
     theme: "text",
     onClick: () => {},
   },

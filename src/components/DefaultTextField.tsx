@@ -1,12 +1,8 @@
 import { useState } from "react";
 import ErrorMessage from "./ErrorMessage";
-import IconButton from "./CheckButton";
 
 interface IDefaultTextFieldProps {
   errorMessage: string;
-  iconPath: string;
-  iconAlt: string;
-  onIconClick: React.MouseEventHandler<HTMLButtonElement>;
   placeholder: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   value: string;
@@ -17,9 +13,6 @@ interface IDefaultTextFieldProps {
 export default function DefaultTextField({
   id,
   errorMessage,
-  iconPath,
-  iconAlt,
-  onIconClick,
   placeholder,
   onChange,
   value,
@@ -44,6 +37,7 @@ export default function DefaultTextField({
       `}
       >
         <input
+          data-testid={id}
           id={id}
           type="text"
           placeholder={placeholder}
@@ -51,9 +45,6 @@ export default function DefaultTextField({
           onChange={onChange}
           className="outline-none"
         />
-        {!!value && (
-          <IconButton onClick={onIconClick} alt={iconAlt} iconPath={iconPath} />
-        )}
       </div>
       {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>

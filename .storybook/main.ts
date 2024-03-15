@@ -8,6 +8,8 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    "@storybook/addon-a11y",
+    "@storybook/addon-interactions",
   ],
   framework: {
     name: "@storybook/react-vite",
@@ -17,7 +19,7 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   core: {
-    builder: '@storybook/builder-vite', 
+    builder: "@storybook/builder-vite",
   },
 };
 export default config;
